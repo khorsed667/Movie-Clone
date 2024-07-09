@@ -1,4 +1,4 @@
-import Movies from '@/components/movies';
+import Movies from '@/components/Movies';
 import React from 'react';
 const API_KEY = process.env.API_KEY;
 

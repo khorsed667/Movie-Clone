@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import React from "react";
+import React, { Suspense } from "react";
 
 const NavItem = ({ tittle, param }) => {
   const serachParams = useSearchParams();
@@ -21,5 +21,11 @@ const NavItem = ({ tittle, param }) => {
     </div>
   );
 };
+const NavItemWithSuspense = (props) => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <NavItem {...props} />
+  </Suspense>
+);
 
-export default NavItem;
+export default NavItemWithSuspense;
+
